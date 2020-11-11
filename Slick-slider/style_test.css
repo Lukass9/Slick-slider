@@ -1,0 +1,88 @@
+*{
+    background-color: grey;
+  }
+  
+  .slick-slider{
+    overflow: hidden;
+    position: relative;
+    background-color: #eee;
+    width: 800px;
+    height: 200px;
+    margin: 50px auto;
+  }
+  
+  .slick-slider .slick-cnt{
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-slider .slick-cnt-coppy{
+    background-color: transparent;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .slick-slider .slick-cnt .block{
+    --transX: 0px;
+    transform: translatex(var(--transX));
+    flex-shrink: 0;
+    background-color: #111;
+    margin: 20px;
+    width: 110px;
+    height: 80px;  
+    color: white;
+    text-align:center;
+    font-size: 4em;
+    transition: all ease-out 0.3s;
+  }
+  
+  .slick-slider .slick-cnt .block-active{
+    --transX: 0px;
+    transform: translatex(var(--transX));
+    transform: scale(2);
+    margin: 150px;
+  /*   box-shadow: 0px 0px 11px 8px #000000; */
+  }
+  
+  .slick-slider .slick-cnt .block-inv{
+    --transX: 0px;
+    transform: translatex(var(--transX));
+  /*   display:none; */
+  /*   margin-left: 100px;
+    margin-right: 100px; */
+  }
+  
+  .slick-slider .slick-cnt-coppy .block-coppy{
+    --transX: 0px;
+    transform: translatex(var(--transX));
+    display: block-inline;
+    transition: transform ease-out 0.25s;
+  
+  
+  }
+  
+  .btn-back, .btn-next{
+      background-color: white;
+      cursor: pointer;
+      z-index: 2;
+      position: absolute;
+      height: 100%;
+      width: 25px;
+      left:0;
+      top:0;
+  }
+  .btn-back:focus, .btn-next:focus{
+     outline: none;
+  }
+  .btn-next{
+    left: auto;
+    right:0;
+  }
+  
+  
