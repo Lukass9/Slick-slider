@@ -31,9 +31,18 @@ class Slider {
       
       this.slides = this.slider.children;
       let i = 1; 
+       //////////////check this number of slide is even///////////////////////////
+      let evenNumber = false;
+      if((this.slides.length)%2 == 0 ){
+        evenNumber = true;
+      }
+    ////////////////////////////////////////
       while(this.slides.length){
         this.slides[0].classList.add("slider-slide");
-        this.slides[0].innerHTML = i;
+        // this.slides[0].innerHTML = i;
+        if(evenNumber){
+          this.slides[0].setAttribute("style", "position: relative; left: 75px;");
+        }
         slidesCnt.appendChild(this.slides[0]);
         i++;
       }
@@ -106,7 +115,7 @@ class Slider {
   
             setTimeout(() => {  // przesuwa bloki
               for(const slide of coppy_slides){
-                slide.style.setProperty("--transX", 75+"px");
+                slide.style.setProperty("--transX", 100+"px");
               }
               resolve();
             }, 20) 
@@ -201,7 +210,7 @@ class Slider {
   
             setTimeout(() => {  // przesuwa bloki
               for(const slide of coppy_slides){
-                slide.style.setProperty("--transX", -75+"px");
+                slide.style.setProperty("--transX", -100+"px");
               }
               resolve();
             }, 20) 
